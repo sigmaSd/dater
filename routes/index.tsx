@@ -1,3 +1,6 @@
+const week = 7;
+const month = week * 4;
+
 const DateDisplay = ({ name, date }: { name: string; date: Date }) => {
   return (
     <div>
@@ -8,12 +11,14 @@ const DateDisplay = ({ name, date }: { name: string; date: Date }) => {
 };
 export default function Home() {
   return (
-    <div class="min-h-screen p-4 flex gap-12 flex-col items-center justify-center text-lg">
+    <div class="min-h-screen p-4 flex gap-8 flex-col items-center justify-center text-lg">
       <DateDisplay name="Today" date={new Date()} />
-      <DateDisplay name="+ 15 jours" date={dateWithDaysOffset(14)} />
-      <DateDisplay name="+ 1 mois" date={dateWithDaysOffset(28)} />
-      <DateDisplay name="+ 3 mois" date={dateWithDaysOffset(28 * 3)} />
-      <DateDisplay name="+ 6 mois" date={dateWithDaysOffset(28 * 6)} />
+      <DateDisplay name="+ 15 jours" date={dateWithDaysOffset(2 * week)} />
+      <DateDisplay name="+ 1 mois" date={dateWithDaysOffset(month)} />
+      <DateDisplay name="+ 2 mois" date={dateWithDaysOffset(2 * month)} />
+      <DateDisplay name="+ 3 mois" date={dateWithDaysOffset(3 * month)} />
+      <DateDisplay name="+ 4 mois" date={dateWithDaysOffset(4 * month)} />
+      <DateDisplay name="+ 6 mois" date={dateWithDaysOffset(6 * month)} />
     </div>
   );
 }
