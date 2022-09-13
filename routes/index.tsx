@@ -8,7 +8,7 @@ const DateDisplay = ({ name, date }: { name: string; date: Date }) => {
 };
 export default function Home() {
   return (
-    <div class = "min-h-screen p-4 flex gap-12 flex-col items-center justify-center text-lg">
+    <div class="min-h-screen p-4 flex gap-12 flex-col items-center justify-center text-lg">
       <DateDisplay name="Today" date={new Date()} />
       <DateDisplay name="+ 15 jours" date={dateWithDaysOffset(14)} />
       <DateDisplay name="+ 1 mois" date={dateWithDaysOffset(28)} />
